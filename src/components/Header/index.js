@@ -1,6 +1,8 @@
+import styles from "./Header.module.css"
+
 function Header(){
     return (
-        <header>
+        <header className={styles.header}>
             <span>MovieFlix</span>
             <nav>
                 <a href="#">Home</a>

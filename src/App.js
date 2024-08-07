@@ -18,7 +18,7 @@ function filterCategory(id) {
   return videos.filter((video) => video.category === categories[id]);
 }
 
-function App() {
+function App(nigga) {
   return (
     <>
       <Header />

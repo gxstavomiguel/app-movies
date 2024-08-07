@@ -26,32 +26,32 @@ function App() {
       <Container>
 
 
-        <Category category="Geografia">
+        <Category category={categories[0]}>
           {filterCategory(0).map((video) => (
             <Card id={video.id} key={video.id} />
           ))}
         </Category>
 
-        <Category category="Como fazer e usar">
+        <Category category={categories[1]}>
           {filterCategory(1).map((video) => (
             <Card id={video.id} key={video.id} />
           ))}
         </Category>
 
-        <Category category="Astronomia e Geografia">
-          {filterCategory(0).map((video) => (
+        <Category category={categories[2]}>
+          {filterCategory(2).map((video) => (
             <Card id={video.id} key={video.id} />
           ))}
         </Category>
 
-        <Category category="Climatologia, Meteorologia, Vegetação">
-          {filterCategory(0).map((video) => (
+        <Category category={categories[3]}>
+          {filterCategory(3).map((video) => (
             <Card id={video.id} key={video.id} />
           ))}
         </Category>
 
-        <Category category="Geologia e Hidrografia">
-          {filterCategory(0).map((video) => (
+        <Category category={categories[4]}>
+          {filterCategory(4).map((video) => (
             <Card id={video.id} key={video.id} />
           ))}
         </Category>

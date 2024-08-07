@@ -7,8 +7,9 @@ function App() {
   return (
     <>
       <Header />
-      <Banner />
+      <Banner image="favoritos"/>
       <Container>
+
       </Container>
       <Footer />
     </>

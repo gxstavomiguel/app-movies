@@ -12,8 +12,6 @@ function Card({ id }){
                   
                 alt="Capa"/>
             </a>
-
-
         </section>
     );
 }

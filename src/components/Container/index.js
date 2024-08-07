@@ -4,7 +4,7 @@ import React from 'react';
 const Container = ({children}) => {
     return (
         <section className={styles.container}>
-            <h1>Hello World</h1>
+            {/* <h1>Hello World</h1> */}
             {children}
         </section>
     )

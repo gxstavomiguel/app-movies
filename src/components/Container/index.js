@@ -1,9 +1,10 @@
 import styles from "./Container.module.css"
 
-function Container(){
+function Container({ children }){
     return (
         <section className={styles.container}>
-            Conteudo
+            <h1>Hello World</h1>
+            <p>Estou aprendendo React JS!</p>
         </section>
     )
 

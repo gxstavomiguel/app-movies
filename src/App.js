@@ -10,7 +10,13 @@ function App() {
       <Header />
       <Banner image="favoritos"/>
       <Container>
+       <section className="cards">
+       <Card />
         <Card />
+        <Card />
+        <Card />
+        <Card />
+       </section>
       </Container>
       <Footer />
     </>

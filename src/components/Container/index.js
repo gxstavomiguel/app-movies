@@ -1,7 +1,6 @@
 import styles from "./Container.module.css"
 import React from 'react';
 
-
 const Container = ({children}) => {
     return (
         <section className={styles.container}>
@@ -36,10 +35,6 @@ function Container({children}){
             <h1>Hello World</h1>
         </section>
     )
-
-
 }
-
 export default Container;
-
 */

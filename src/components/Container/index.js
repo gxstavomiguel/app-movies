@@ -1,14 +1,14 @@
 import styles from "./Container.module.css"
+import React from 'react';
 
-function Container({ children }){
+
+const Container = ({children}) => {
     return (
         <section className={styles.container}>
             <h1>Hello World</h1>
-            <p>Estou aprendendo React JS!</p>
+            {children}
         </section>
     )
-
-
 }
 
 export default Container;

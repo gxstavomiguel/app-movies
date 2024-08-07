@@ -1,4 +1,5 @@
 import Banner from "./components/Banner";
+import Card from "./components/Card";
 import Container from "./components/Container";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -9,7 +10,7 @@ function App() {
       <Header />
       <Banner image="favoritos"/>
       <Container>
-
+        <Card />
       </Container>
       <Footer />
     </>

@@ -14,6 +14,9 @@ code {
 
 /* Formatação geral dos cards */
 
-.card {
+.cards {
   display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
 }

@@ -12,3 +12,34 @@ const Container = ({children}) => {
 }
 
 export default Container;
+
+/** Modelo original do video, mesmo com a prop de children
+ function App() {
+  return (
+    <>
+      <Header />
+      <Banner image="favoritos"/>
+      <Container>
+        <Card />
+      </Container>
+      <Footer />
+    </>
+  );
+}
+export default App;
+
+import styles from "./Container.module.css"
+
+function Container({children}){
+    return (
+        <section className={styles.container}>
+            <h1>Hello World</h1>
+        </section>
+    )
+
+
+}
+
+export default Container;
+
+*/

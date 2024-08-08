@@ -1,8 +1,17 @@
 .container {
     padding-top: 84px;
     width: 100%;
-    height: 80vh;
+    height: 95vh;
     background: #222;
     color: #fff;
     text-align: center;
+}
+
+.container h2 {
+    padding-block: 2rem;
+}
+
+.container img {
+    height: 450px;
+    padding-bottom: 2rem;
 }

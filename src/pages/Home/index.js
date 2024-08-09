@@ -10,10 +10,8 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 function Home() {
-  //let nomeDigitado = '';
   function pegarNome(event) {
     console.log(event.target.value);
-    //nomeDigitado = event.target.value;
     setNome(event.target.value);
   }
 
@@ -26,15 +24,13 @@ function Home() {
       <Header />
       <Banner image="favoritos" />
       <Container>
-        <input type="text" placeholder="Nome" value="" onChange={pegarNome} />
-        <h2>{nome}</h2>
-        {/* {categories.map((category, index) => (
+        {categories.map((category, index) => (
           <Category category={category}>
             {filterCategory(index).map((video) => (
               <Card id={video.id} key={video.id} />
             ))}
           </Category>
-        ))} */}
+        ))}
       </Container>
       <Footer />
     </>

@@ -10,8 +10,7 @@ function Search() {
         <Container>
         <section className={styles.search}>
         <h2>Pesquisar</h2>
-        <input type="search">
-        </input>
+        <input type="search" />
       </section>
         </Container>
       <Footer />

@@ -1,14 +1,29 @@
+import { useState } from "react";
 import VideoList from "../../components/VideoList"
 import styles from "./SearchVideoList.module.css"
 
+//Filtra por categoria/titulo, implementar meio de converter as palvras recebidas no input tudo para minusculas
+
+function filterVideo(videos, searchText){
+    return videos.filter((video) => video.category.includes(searchText) || video.title.includes(searchText))
+}
+
+
 function SearchVideoList( {videos }){
+
+    const [ searchText, setSearchText ] = useState();
+    const foundVideos = filterVideo(videos, searchText)
+
+
     return(
         <section className={styles.container}>
             <input
                 type="search"
-                placeholder="Pesquisar..." 
+                placeholder="Pesquisar..."
+                value={searchText}
+                onChange={e => setSearchText(e.target.value)} 
             />
-                <VideoList videos={videos}/>
+                <VideoList videos={foundVideos}/>
         </section>
     );
 }

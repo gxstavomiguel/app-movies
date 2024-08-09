@@ -11,7 +11,7 @@ function filterVideo(videos, searchText){
 
 function SearchVideoList( {videos }){
 
-    const [ searchText, setSearchText ] = useState();
+    const [ searchText, setSearchText ] = useState("");
     const foundVideos = filterVideo(videos, searchText)
 
 
@@ -23,7 +23,10 @@ function SearchVideoList( {videos }){
                 value={searchText}
                 onChange={e => setSearchText(e.target.value)} 
             />
-                <VideoList videos={foundVideos}/>
+            <VideoList 
+                    videos={foundVideos}
+                    emptyHeading={`Sem vídeos sobre "${searchText}"`}
+                />
         </section>
     );
 }

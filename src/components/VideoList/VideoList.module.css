@@ -1,0 +1,6 @@
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5x;
+    justify-content: center;
+}

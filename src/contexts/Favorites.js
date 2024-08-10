@@ -7,32 +7,35 @@ export default function FavoritesProvider({ children }) {
   const [favorite, setFavorite] = useState([]);
 
   return (
-    <FavoritesContext.Provider
-      value={{ favorite, setFavorite }}
-    >
-
-        { children }
+    <FavoritesContext.Provider value={{ favorite, setFavorite }}>
+      {children}
     </FavoritesContext.Provider>
   );
 }
 
 //Hook personalizado
 
-export function useFavoritesContext(){
-    const { favorites, setFavorites } = useContext(FavoritesContext)
+export function useFavoritesContext() {
+  const { favorite, setFavorite } = useContext(FavoritesContext);
 
-    function addFavorite(newFavorite){
+  function addFavorite(newFavorite) {
+    const repeatedFavorite = favorite.some(
+      (item) => item.id === newFavorite.id
+    );
 
-        const repeatedFavorite = favorite.some((item) => item.id === newFavorite.id)
+    let newList = [...favorite];
 
-        let newList = [...favorite]
-
-        if(!repeatedFavorite){
-            newList.push(newFavorite)
-            return setFavorite(newList)
-        }
-
-        newList = favorite.filter((fav) => fav.id !== newFavorite.id)
-        return setFavorite(newList)
+    if (!repeatedFavorite) {
+      newList.push(newFavorite);
+      return setFavorite(newList);
     }
+
+    newList = favorite.filter((fav) => fav.id !== newFavorite.id);
+    return setFavorite(newList);
+  }
+
+  return {
+    favorite,
+    addFavorite,
+  };
 }

@@ -9,7 +9,7 @@ function Card({ id }) {
 
   const { favorite, addFavorite } = useFavoritesContext()
   const isFavorite = favorite.some((fav) => fav.id === id)
-  const icone = isFavorite ? iconUnFavorite : iconFavorite
+  const icone = !isFavorite ? iconFavorite : iconUnFavorite
   return (
     <section className={styles.card}>
       <Link to={`/watch/${id}`}>

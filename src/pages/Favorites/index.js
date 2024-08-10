@@ -7,7 +7,12 @@ function Favorites() {
   return (
     <>
       <Header />
-      <Container />
+      <Container>
+            <H2>Meus Favoritos</H2>
+            <section className={styles.favorites}>
+                
+                </section>
+      </Container>
       <Footer />
     </>
   );

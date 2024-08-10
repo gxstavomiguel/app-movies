@@ -1,17 +1,16 @@
 import styles from "./Favorites.module.css";
 import Header from "../../components/Header";
-import Header from "../../components/Container";
-import Header from "../../components/Footer";
+import Container from "../../components/Container";
+import Footer from "../../components/Footer";
 
 function Favorites() {
   return (
     <>
       <Header />
       <Container>
-            <H2>Meus Favoritos</H2>
-            <section className={styles.favorites}>
-                
-                </section>
+        <section className={styles.favorites}>
+          <h2>Meus Favoritos</h2>
+        </section>
       </Container>
       <Footer />
     </>

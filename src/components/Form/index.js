@@ -12,6 +12,18 @@ function onSave(e){
     //Impede a pagina de recarregar e limpar os campos
     e.preventDefault()
     console.log(url, category)
+
+    if(!category || category === '-'){
+        console.log('Escolha uma categoria')
+        setError('ERRO: Escolha uma categoria!')
+        return 
+    } else {
+        setErrors('')
+    }
+
+
+
+
     // guardar url e category
     const newVideo = { url, category }
     setVideos([...videos, newVideo])
@@ -32,6 +44,8 @@ function onSave(e){
             required="required"
             value={url}
             onChange={(e) => setUrl(e.target.value)}
+            minLength="43"
+            maxLength="43"
           />
         </div>
         <div>
@@ -50,6 +64,9 @@ function onSave(e){
         </div>
         <div>
           <button>Cadastrar</button>
+        </div>
+        <div>
+            { errors }
         </div>
       </form>
     </section>

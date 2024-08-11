@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import VideoList from "../../components/VideoList"
 import styles from "./SearchVideoList.module.css"
 
@@ -13,6 +13,11 @@ function SearchVideoList( {videos }){
 
     const [ searchText, setSearchText ] = useState("");
     const foundVideos = filterVideo(videos, searchText)
+
+    const [ loading, setLoading ] = useState(true)
+    useEffect(() => {
+        setTimeout(() => setLoading(false), 500)
+    }, [])
 
 
     return(

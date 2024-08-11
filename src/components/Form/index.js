@@ -8,29 +8,43 @@ function Form() {
   const [ videos, setVideos ] = useState([])
   const [ errors, setErrors ] = useState('')
 
+  function valideUrl(url) {
+    const regex = /^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+$/;
+    
+    if(!regex.teste(url) || url.length < 43){
+        setErrors('ERRO: URL inválida');
+        return false;
+    } else {
+        return url.substring(32, 43) // pega id do video
+    }
+}
+
 function onSave(e){
     //Impede a pagina de recarregar e limpar os campos
     e.preventDefault()
     console.log(url, category)
 
+    const urlVideo = valideUrl(url)
+    if(urlVideo && category) {
+        //salvar dados
+        const newVideo = { url, category }
+        setVideos([...videos, newVideo])
+        localStorage.setItem('videos', JSON.stringify([...videos, newVideo]))
+        setUrl('')
+        setCategory('')
+    } else {
+        setErrors('ERRO: URL inválida!')
+    }
+    }
+
+
     if(!category || category === '-'){
         console.log('Escolha uma categoria')
-        setError('ERRO: Escolha uma categoria!')
+        setErrors('ERRO: Escolha uma categoria!')
         return 
     } else {
         setErrors('')
     }
-
-
-
-
-    // guardar url e category
-    const newVideo = { url, category }
-    setVideos([...videos, newVideo])
-    localStorage.setItem('videos', JSON.stringify([...videos, newVideo]))
-    setUrl('')
-    setCategory('')
-}
 
   return (
     <section className={styles.container}>

@@ -28,7 +28,8 @@
     font-size: 1.5rem;
 }
 
-.containuer input, .container select {
+.container input,
+.container select {
     background-color: #FFF;
     width: 100%;
     padding: 15px 10px;
@@ -38,6 +39,7 @@
     border-radius: 5-x;
     font-size: 1.125rem;
 }
+
 .container button {
     background-color: #b71c1c;
     border-radius: 10px;

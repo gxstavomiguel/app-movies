@@ -29,7 +29,7 @@
 }
 
 .containuer input, .container select {
-    background-color: #fff;
+    background-color: #FFF;
     width: 100%;
     padding: 15px 10px;
     margin-bottom: 0.5rem;
@@ -37,4 +37,19 @@
     outline: none;
     border-radius: 5-x;
     font-size: 1.125rem;
+}
+.container button {
+    background-color: #b71c1c;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    padding: 24px 28px;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+    margin-top: 0.5rem;
+}
+
+.container button:hover {
+    background-color: #f44336;
 }

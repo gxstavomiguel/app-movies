@@ -15,7 +15,9 @@ function onSave(e){
     // guardar url e category
     const newVideo = { url, category }
     setVideos([...videos, newVideo])
-    console.log(videos)
+    localStorage.setItem('videos', JSON.stringify([...videos, newVideo]))
+    setUrl('')
+    setCategory('')
 }
 
   return (

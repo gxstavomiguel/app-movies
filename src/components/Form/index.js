@@ -9,9 +9,9 @@ function Form() {
   const [ errors, setErrors ] = useState('')
 
   function valideUrl(url) {
-    const regex = /^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+$/;
-    
-    if(!regex.teste(url) || url.length < 43){
+    const regex = /^(https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:embed\/|watch\?v=)|youtu\.be\/)([a-zA-Z0-9\-_]+)$/
+        
+    if(!regex.test(url) || url.length < 43){
         setErrors('ERRO: URL inválida');
         return false;
     } else {
@@ -24,6 +24,14 @@ function onSave(e){
     e.preventDefault()
     console.log(url, category)
 
+    if(!category || category === '-'){
+        console.log('Escolha uma categoria')
+        setErrors('ERRO: Escolha uma categoria!')
+        return 
+    } else {
+        setErrors('')
+    }
+
     const urlVideo = valideUrl(url)
     if(urlVideo && category) {
         //salvar dados
@@ -35,15 +43,6 @@ function onSave(e){
     } else {
         setErrors('ERRO: URL inválida!')
     }
-    }
-
-
-    if(!category || category === '-'){
-        console.log('Escolha uma categoria')
-        setErrors('ERRO: Escolha uma categoria!')
-        return 
-    } else {
-        setErrors('')
     }
 
   return (

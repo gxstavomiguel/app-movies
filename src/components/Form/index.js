@@ -1,14 +1,21 @@
 import styles from "./Form.module.css";
 import { categories } from "../Category";
+import { useState } from "react";
 
 function Form() {
   const [url, setUrl] = useState("");
   const [category, setCategory] = useState("");
+  const [ videos, setVideos ] = useState([])
+  const [ errors, setErrors ] = useState('')
 
 function onSave(e){
     //Impede a pagina de recarregar e limpar os campos
     e.preventDefault()
     console.log(url, category)
+    // guardar url e category
+    const newVideo = { url, category }
+    setVideos([...videos, newVideo])
+    console.log(videos)
 }
 
   return (

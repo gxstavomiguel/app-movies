@@ -1,4 +1,4 @@
-import styles from "./Form.module.css"
+import styles from "./Form.module.css";
 
 function Form(){
     return (

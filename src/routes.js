@@ -5,7 +5,7 @@ import PageNotFound from "./pages/PageNotFound";
 import Search from "./pages/Search";
 import Favorites from "./pages/Favorites";
 import FavoritesProvider from "./contexts/Favorites";
-import VideoCadastre from "./pages/VideoCadastre"
+import VideoCadastre from "./pages/VideoCadastre";
 
 function AppRoutes() {
   return (

@@ -19,6 +19,9 @@ function Form(){
                         <option value="-">Selecione uma Categoria</option>
                     </select>
                 </div>
+                <div>
+                    <button>Cadastrar</button>
+                </div>
             </form>
         </section>
     );

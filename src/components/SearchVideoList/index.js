@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import VideoList from "../../components/VideoList";
 import styles from "./SearchVideoList.module.css";
+import Loader from "../../components/Loader"
 
 //Filtra por categoria/titulo, implementar meio de converter as palvras recebidas no input tudo para minusculas
 

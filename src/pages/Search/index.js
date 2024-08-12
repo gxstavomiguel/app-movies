@@ -13,7 +13,6 @@ function Search() {
       <Header />
       <Container>
         <section className={styles.search}>
-          <h2>Pesquisar</h2>
           <SearchVideoList videos={videos} />
         </section>
       </Container>
